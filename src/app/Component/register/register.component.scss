@@ -1,0 +1,38 @@
+.container{
+    width: 700px;
+    height: 480px;
+    margin-top: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border : cornsilk;
+    border-width: 2px;
+    border-style: groove;
+}
+
+.tab{
+    padding-left: 20px;
+   padding-right: 20px; 
+   padding-top:1px; 
+}
+.toggleColor{
+    background-color:rgba($color: rgba($color: #17ce30, $alpha: 1.0), $alpha: 1.0);
+}
+
+.subContainer{
+    width: 500px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+    // background-color : blanchedalmond;
+}
+.button{
+   padding-left: 20px;
+   padding-right: 20px; 
+   padding-top:20px;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}

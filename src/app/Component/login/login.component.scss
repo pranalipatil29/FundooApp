@@ -1,0 +1,36 @@
+.container{
+    width: 500px;
+    height: 450px;
+    margin-top: 100px;
+    margin-left: 400px;
+    margin-right: 300px;
+    border : cornsilk;
+    border-width: 2px;
+    border-style: groove;
+   }
+.tab{
+    padding-left: 20px;
+   padding-right: 20px; 
+   padding-top:2px; 
+}
+.subContainer{
+    width: 400px;
+    height: 390px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 30px;
+    // background-color : blanchedalmond;
+}
+.example-container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}

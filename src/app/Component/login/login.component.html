@@ -1,0 +1,40 @@
+<mat-card class="container">
+    
+
+    <div class="subContainer">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <mat-card-header class="tab">
+                <mat-card-title>Sign In</mat-card-title>       
+                <mat-card-subtitle>Use your Google Account</mat-card-subtitle>
+            </mat-card-header>
+        </div>
+        <div class="tab">
+            <div class="example-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Email ID</mat-label>
+                <!-- <input matInput placeholder="Enter your email" [formControl]="email" required> -->
+                <input matInput placeholder="Email ID" >
+                <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+            <mat-form-field appearance="outline">            
+                <mat-label>Enter Password</mat-label>                    
+                <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">   
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>                                                         
+        </mat-form-field>
+        </div>
+       </div>
+
+       <div class="tab" >
+        <div class="example-button-row">
+          <a mat-button routerLink=".">Forget Password?</a> 
+        </div>
+       </div>
+
+       <div class="tab" style="padding-top: 20px;">
+        <div class="example-button-row">
+            <a mat-flat-button routerLink=".">Create Account</a>
+            <button mat-raised-button color="primary">Sign In</button>  
+          </div>
+       </div>
+    </div>
+</mat-card>
