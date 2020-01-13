@@ -4,6 +4,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
+//import {FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     
@@ -13,7 +15,12 @@ import {MatCardModule} from '@angular/material/card';
         MatButtonToggleModule,
         MatButtonModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        // FormBuilder,
+        // FormGroup,     
+        // Validators,
+        ReactiveFormsModule
+
     ],
     exports:[
         MatFormFieldModule,
@@ -21,7 +28,11 @@ import {MatCardModule} from '@angular/material/card';
         MatButtonToggleModule,
         MatButtonModule,
         MatIconModule,
-        MatCardModule
+        MatCardModule,
+        // FormBuilder,
+        // FormGroup,       
+        // Validators,
+        ReactiveFormsModule
     ],
     providers: []
   })

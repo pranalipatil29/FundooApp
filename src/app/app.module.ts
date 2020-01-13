@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { materialModule } from './app.material.module';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './Component/register/register.component';
@@ -17,12 +18,14 @@ import { ResetPasswordComponent } from './Component/reset-password/reset-passwor
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     materialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
