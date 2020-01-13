@@ -9,7 +9,6 @@ export class RegisterComponent implements OnInit {
 
   constructor() { }
   hide=true
-  color
 
   ngOnInit() {
   }

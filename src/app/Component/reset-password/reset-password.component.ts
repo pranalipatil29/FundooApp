@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ResetPasswordComponent implements OnInit {
 
   constructor() { }
-
+  hide=true
+  
   ngOnInit() {
   }
 
