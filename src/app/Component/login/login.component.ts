@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/UsrService/user.service';
 import { Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import { Action } from 'rxjs/internal/scheduler/Action';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loginForm =this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       EmailID :['', [Validators.required,Validators.email]],
       Password:['', [Validators.required, Validators.minLength(6)]]
     });  
@@ -51,7 +50,11 @@ export class LoginComponent implements OnInit {
       },
       error =>
       {      
-        console.log("Error",error);      
+        console.log("Error",error);  
+        this.snackBar.open(error['error']['message'] ,'',{ 
+          duration:50000,
+          verticalPosition: 'top',
+          horizontalPosition:'center' } )
       })
   }
 }

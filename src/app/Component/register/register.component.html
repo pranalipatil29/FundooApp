@@ -2,67 +2,68 @@
     <mat-card-header class="tab">
         <mat-card-title>Create Your account</mat-card-title>       
      </mat-card-header>
-  <mat-card-content class="subContainer">
-        <div class="tab">        
-            <div class="example-container">
-                <mat-form-field appearance="outline">
-                    <mat-label>First Name</mat-label>
-                    <input matInput placeholder="First Name" >
-                </mat-form-field>
-                   
-                <mat-form-field appearance="outline" style="padding-left: 20px;">
-                    <mat-label>Last Name</mat-label>
-                      <input matInput placeholder="Last Name" >
-                </mat-form-field>
-            </div> 
-        </div>
-
-        <div class="tab">        
-            <div class="example-container">
-                <mat-form-field appearance="outline" >
-                    <mat-label>User Name</mat-label>
-                    <input matInput placeholder="User Name" >
-                </mat-form-field>
-              
-                <mat-form-field appearance="outline" style="padding-left: 20px;">
-                    <mat-label>Email ID</mat-label>
-                    <!-- <input matInput placeholder="Enter your email" [formControl]="email" required> -->
-                    <input matInput placeholder="Email ID" >
-                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-                </mat-form-field>
+    <form [formGroup] = "registrationForm">
+        <mat-card-content class="subContainer">
+                <div class="tab">        
+                    <div class="example-container">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="First Name" formControlName="FirstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && FirstName.errors }" />
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="outline" style="padding-left: 20px;">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Last Name" formControlName="LastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && LastName.errors }" />
+                        </mat-form-field>
+                    </div> 
                 </div>
-        </div>
 
-        <div class="tab">        
-            <div class="example-container" >
-                <mat-form-field appearance="outline"> 
-                        <mat-label>Password</mat-label>                    
-                        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">                                                            
-                </mat-form-field>
-               
-                <mat-form-field appearance="outline" style="padding-left: 20px;">
-                    <mat-label>Conform Password</mat-label>
-                    <input matInput placeholder="Conform Password" [type]="hide ? 'password' : 'text'">
-                </mat-form-field>
-                &nbsp;
-                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>  
-            </div>
-        </div>
+                <div class="tab">        
+                    <div class="example-container">
+                        <mat-form-field appearance="outline" >
+                            <mat-label>User Name</mat-label>
+                            <input matInput placeholder="User Name" formControlName="UserName" class="form-control" [ngClass]="{ 'is-invalid': submitted && UserName.errors }" />
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" style="padding-left: 20px;">
+                            <mat-label>Email ID</mat-label>
+                            <!-- <input matInput placeholder="Enter your email" [formControl]="email" required> -->
+                            <input matInput placeholder="Email ID" formControlName="EmailID" class="form-control" [ngClass]="{ 'is-invalid': submitted && EmailID.errors }" />
+                            <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                        </mat-form-field>
+                        </div>
+                </div>
 
-        <div class="tab" >        
-            <mat-button-toggle-group #toggleGroup ="matButtonToggleGroup" >
-                <mat-button-toggle value="Basic" (click)="color=true" [style.backgroundColor]="color==true?'#17ce30':'white'" >Basic</mat-button-toggle>
-                <mat-button-toggle value="Advance" (click)="color=false"[style.backgroundColor]="color==false?'#17ce30':'white'">Advance</mat-button-toggle>
-            </mat-button-toggle-group>
-            <!-- {{toggleGroup.value}}      -->
-        </div>    
-      
-        <div class="button"  fxLayout="row" fxLayoutAlign="space-between center">
-            <div class="example-button-row">
-                <a mat-flat-button routerLink="/login">Sign in Instead</a>
-                <button mat-raised-button color="primary" routerLink="/login">Next</button>                 
-            </div>
-        </div>    
-  </mat-card-content>
+                <div class="tab">        
+                    <div class="example-container" >
+                        <mat-form-field appearance="outline"> 
+                                <mat-label>Password</mat-label>                    
+                                <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />                                                            
+                        </mat-form-field>
+                    
+                        <mat-form-field appearance="outline" style="padding-left: 20px;">
+                            <mat-label>Conform Password</mat-label>
+                            <input matInput placeholder="Conform Password" [type]="hide ? 'password' : 'text'" formControlName="Password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Password.errors }" />
+                        </mat-form-field>
+                        &nbsp;
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>  
+                    </div>
+                </div>
 
+                <div class="tab" >        
+                    <mat-button-toggle-group #toggleGroup ="matButtonToggleGroup" formControlName="ServiceType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ServiceType.errors }">
+                        <mat-button-toggle value="Basic" (click)="color=true" [style.backgroundColor]="color==true?'#17ce30':'white'" >Basic</mat-button-toggle>
+                        <mat-button-toggle value="Advance" (click)="color=false"[style.backgroundColor]="color==false?'#17ce30':'white'">Advance</mat-button-toggle>
+                    </mat-button-toggle-group>
+                    <!-- {{toggleGroup.value}}      -->
+                </div>    
+            
+                <div class="button"  fxLayout="row" fxLayoutAlign="space-between center">
+                    <div class="example-button-row">
+                        <a mat-flat-button routerLink="/login">Sign in Instead</a>
+                        <button mat-raised-button color="primary" (click) = Registration(this.form-control)>Next</button>                 
+                    </div>
+                </div>    
+        </mat-card-content>
+    </form>
 </mat-card>
