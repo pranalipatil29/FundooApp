@@ -6,7 +6,6 @@ import {environment} from '../../../environments/environment';
   providedIn: 'root'
 })
 export class HttpService {
-
   baseURL= environment.BaseURl
 
   constructor(private httpClient: HttpClient) { }

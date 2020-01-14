@@ -4,7 +4,6 @@ import {HttpService} from './../HttpService/http.service';
   providedIn: 'root'
 })
 export class UserService {
-
   constructor(private httpService : HttpService) { }
 
   Login(data)
