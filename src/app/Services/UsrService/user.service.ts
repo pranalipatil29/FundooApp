@@ -16,4 +16,9 @@ export class UserService {
   {
     return this.httpService.post('api/Account/Register',data);
   }
+
+  ForgetPassword(data)
+  {
+    return this.httpService.post('api/Account/ForgetPassword',data);
+  }
 }
