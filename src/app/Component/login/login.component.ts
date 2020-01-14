@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from 'src/app/Services/UsrService/user.service';
 import { Router } from '@angular/router';
-
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { Action } from 'rxjs/internal/scheduler/Action';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(
      private formBuilder : FormBuilder,
      private userService : UserService,
+     private snackBar: MatSnackBar,
      private router: Router
      ) { 
   }
@@ -29,11 +31,10 @@ export class LoginComponent implements OnInit {
     });  
   } 
 
-  get f() { return this.loginForm.controls; }
-
   Login(data)
   {
     console.log("data :",this.loginForm.value);
+   
     this.userService.Login(this.loginForm.value).subscribe(response =>
       {
         console.log("response is : ", response);
@@ -41,10 +42,15 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('FirstName',response['data']['firstName']),
         localStorage.setItem('LastName',response['data']['lastName']),
         localStorage.setItem('EmailID',response['data']['emailID']),
-        localStorage.setItem('Profilepicture',response['data']['profilepicture'])
+        localStorage.setItem('Profilepicture',response['data']['profilepicture']),
+        this.snackBar.open(response['message'],'',{
+          duration:2000,
+          verticalPosition: 'top',
+          horizontalPosition:'center'
+        });
       },
       error =>
-      {
+      {      
         console.log("Error",error);      
       })
   }
