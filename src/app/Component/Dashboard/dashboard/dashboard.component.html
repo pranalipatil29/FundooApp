@@ -1,0 +1,33 @@
+<mat-toolbar class="toolbar" > 
+    <!-- <div style="display: flex;" fxLayout="row" fxLayoutAlign="start center" fxFlex="100%">
+        <div    fxLayout="row"  fxFlex=25>
+            <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>  
+            <h1>Keep</h1>         
+        </div>
+        
+    </div>
+    <div style="display: flex;" fxLayout="row" fxLayoutAlign="end center" fxFlex="100%">
+        <div  fxFlex=25 fxLayout="row" >
+            <button mat-icon-button ><mat-icon>person</mat-icon></button>  
+    </div>
+    </div> -->
+    <div>
+        <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>  
+        <h1>Keep</h1>         
+    </div>
+        <div style="padding-left: 1250px;">
+            <button mat-icon-button ><mat-icon>person</mat-icon></button>  
+        </div>
+                   
+    </mat-toolbar> 
+    
+    <mat-drawer-container  class="NoteContainer">
+        <mat-drawer #drawer class="example-sidenav" mode="side">       
+            <button mat-flat-button >Notes</button>
+        </mat-drawer>
+
+        <div class="example-sidenav-content">
+           Notes info
+          </div>
+     </mat-drawer-container>        
+
