@@ -21,4 +21,10 @@ export class UserService {
   {
     return this.httpService.post('api/Account/ForgetPassword',data);
   }
+
+  ResetPassword(data)
+  {
+    return this.httpService.put('api/Account/ResetPassword',data);
+  }
+  
 }

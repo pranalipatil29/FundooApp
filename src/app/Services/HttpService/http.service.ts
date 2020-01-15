@@ -23,4 +23,17 @@ export class HttpService {
     return this.httpClient.post(this.baseURL+url, data, options);
   }
 
+  put(url,data)
+  {
+      let options=
+      {
+        headers:new HttpHeaders
+        ({
+          'Authorization':'Bearer'+localStorage.getItem('token'),
+          'Content-Type':'application/json'
+        })
+     } 
+     
+    return this.httpClient.put(this.baseURL+url, data, options);
+  }
 }

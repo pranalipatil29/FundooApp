@@ -69,9 +69,9 @@ export class RegisterComponent implements OnInit {
     },
     error =>
     {      
-      console.log("Error",error);  
+      console.log("Error",error);    
       this.snackBar.open(error['error']['message'] ,'Error Occured',{ 
-        duration:2000,
+        duration:2000,    
         verticalPosition: 'top',
         horizontalPosition:'center' } )
     })
