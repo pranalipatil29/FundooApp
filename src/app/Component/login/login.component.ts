@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
       error =>
       {      
         console.log("Error",error);  
-        this.snackBar.open(error['error']['message'] ,'',{ 
+        this.snackBar.open(error['error']['message'] ,'Error Occured',{ 
           duration:50000,
           verticalPosition: 'top',
           horizontalPosition:'center' } )

@@ -10,7 +10,7 @@ const routes: Routes = [
 { path : 'register', component : RegisterComponent },
 {path:'login', component:LoginComponent},
 {path:'forgetPassword', component:ForgetPasswordComponent},
-{path:'resetPassword', component:ResetPasswordComponent},
+{path:'resetPassword/:token', component:ResetPasswordComponent},
  {path : '', redirectTo: '/login', pathMatch:'full'}
 ];
 

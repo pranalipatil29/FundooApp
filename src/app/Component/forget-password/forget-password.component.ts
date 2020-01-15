@@ -11,7 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ForgetPasswordComponent implements OnInit {
 
-  hide=true
+  hide=true 
   forgetPasswordForm:FormGroup
   submitted = false;
 
@@ -45,7 +45,7 @@ export class ForgetPasswordComponent implements OnInit {
       error =>
       {      
         console.log("Error",error);  
-        this.snackBar.open(error['error']['message'] ,'',{ 
+        this.snackBar.open(error['error']['message'] ,'Error Occured',{ 
           duration:50000,
           verticalPosition: 'top',
           horizontalPosition:'center' } )

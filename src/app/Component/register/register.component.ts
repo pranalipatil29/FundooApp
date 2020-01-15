@@ -32,8 +32,16 @@ export class RegisterComponent implements OnInit {
       UserName : ['',Validators.required],
       EmailID :['', [Validators.required,Validators.email]],
       Password:['', [Validators.required, Validators.minLength(6)]],
-      ServiceType : ['',Validators.required]
-    });  
+      ServiceType : ['',Validators.required],
+      ConformPassword : ['',[Validators.required,Validators.minLength(6)]]
+    }, {validator: this.CheckPassword}); 
+  }
+
+  CheckPassword(group : FormGroup)
+  {
+    let password = group.get('Password').value;
+    let conformPassword = group.get('ConformPassword').value;
+    return password === conformPassword ? null : { notSame : true }
   }
 
   Registration(data)
@@ -56,15 +64,14 @@ export class RegisterComponent implements OnInit {
         duration:2000,
         verticalPosition: 'top',
         horizontalPosition:'center'
-      });
-      
+      });    
       this.router.navigate(['/login']);
     },
     error =>
     {      
       console.log("Error",error);  
-      this.snackBar.open(error['error']['message'] ,'',{ 
-        duration:50000,
+      this.snackBar.open(error['error']['message'] ,'Error Occured',{ 
+        duration:2000,
         verticalPosition: 'top',
         horizontalPosition:'center' } )
     })
