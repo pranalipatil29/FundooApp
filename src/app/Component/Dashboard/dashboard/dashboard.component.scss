@@ -22,7 +22,7 @@
   }
 
   .toolbar-options{
-    padding: 10px;
+    padding-left: 10px;
     background-color:white;
     }
 
@@ -43,4 +43,33 @@
       border-radius: 15px;
       background-color: whitesmoke;
     }
-  
+
+    .snavbarButtons{
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+  .toolbar-last-option-buttons
+  {
+    // padding-left: 10px;
+    padding-right: 40px;
+    width: 100px;
+    //  background-color: grey;
+    padding-left: 100px;
+
+  }
+  .toolbar-option-buttons
+  {
+    // background-color: yellow;
+   padding-left: 80px;
+   width: 200px;
+   padding-right: 20;
+  // background-color: green($color: #df9931);
+  }
+
+  .takeANote{
+    width: 40%;
+    height: 40px;
+  border-top: 10px;
+  padding-top: 0px;
+  }
