@@ -1,8 +1,8 @@
 .toolbar{
-    background-color: whitesmoke;
+    background-color: white;
+    height: 70px;
 }
 .NoteContainer{
-   
    margin-top: 10px;
    height: 500px;
     border : cornsilk;
@@ -16,8 +16,31 @@
     align-items: center;
     justify-content: center;
   }
-  
   .example-sidenav {
-    padding: 20px;
- width: 20%;
+    // padding: 20px;
+    width: 20%;
   }
+
+  .toolbar-options{
+    padding: 10px;
+    background-color:white;
+    }
+
+    .sideNavList{
+      border-top: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      border-bottom: 1px;
+      padding-bottom: 10px;
+      border-style:groove ;
+    }
+
+    .searchOptiopn{
+      padding-left: 10px;
+      width: 3000px;
+      padding-top: 10px;
+      height: 50px;
+      border-radius: 15px;
+      background-color: whitesmoke;
+    }
+  

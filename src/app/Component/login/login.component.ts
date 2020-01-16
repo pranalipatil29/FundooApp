@@ -47,6 +47,7 @@ export class LoginComponent implements OnInit {
           verticalPosition: 'top',
           horizontalPosition:'center'
         });
+        this.router.navigate(['/dashboard']);
       },
       error =>
       {      

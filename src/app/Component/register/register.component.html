@@ -95,13 +95,13 @@
                         <mat-button-toggle value="Advance" (click)="checked=false"[style.backgroundColor]="checked==false?'#17ce30':'white'">Advance</mat-button-toggle>
                         <mat-error *ngIf="registrationForm.get('ServiceType').hasError('required')">
                             *
-                         </mat-error>
+                        </mat-error>
                     </mat-button-toggle-group>
                     <!-- {{toggleGroup.value}}      -->
                     
                 </div>    
             
-                <div class="button"  fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="button" fxLayout="row" fxLayoutAlign="space-between center">
                     <div class="example-button-row">
                         <a mat-flat-button routerLink="/login">Sign in Instead</a>
                         <button mat-raised-button color="primary" (click) = Registration(this.form-control)>Next</button>                 
