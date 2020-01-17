@@ -4,7 +4,7 @@ import { RegisterComponent } from './Component/register/register.component';
 import { LoginComponent } from './Component/login/login.component';
 import { ForgetPasswordComponent } from './Component/forget-password/forget-password.component';
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
-import { DashboardComponent } from './Component/Dashboard/dashboard/dashboard.component';
+import { DashboardComponent } from './Component/dashboard/dashboard.component';
 import { CreateNoteComponent } from './Component/create-note/create-note.component';
 
 
