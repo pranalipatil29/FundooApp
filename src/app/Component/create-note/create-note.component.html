@@ -27,8 +27,8 @@
                 <input matInput appearance="none" placeholder="Title" [(ngModel)]="title" style="width: 100%; height: 50px; padding-bottom: 5px;">
                 
                 <div fxLayoutAlign="end center" fxLayout="row" class="pin">
-                    <button mat-icon-button (click)="checked=true" class="buttons" fxLayoutAlign="center center" >
-                        <img src="/assets/pin.jpg" style="padding-bottom: 7px; width: 30px; height: 30px; padding-top: 5px;">
+                    <button mat-icon-button  fxLayoutAlign="center center"  >
+                        <img src="/assets/pin.jpg" (click)="isPin = true" class="buttons" style="padding-bottom: 7px; width: 30px; height: 30px; padding-top: 5px;">
                     </button> 
                 </div>
             </div>
