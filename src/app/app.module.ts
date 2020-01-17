@@ -12,6 +12,7 @@ import { ForgetPasswordComponent } from './Component/forget-password/forget-pass
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
 import { HttpClientModule }    from '@angular/common/http';
 import { DashboardComponent } from './Component/Dashboard/dashboard/dashboard.component';
+import { CreateNoteComponent } from './Component/create-note/create-note.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardComponent } from './Component/Dashboard/dashboard/dashboard.co
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateNoteComponent
         
   ],
   imports: [

@@ -2,8 +2,7 @@
    <div class="toolbar-options" style="display: flex;" fxLayout="row" fxFlex="100%">
         <div fxLayoutAlign="start center" fxLayout="row"  fxFlex=50>
             <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>  
-            <h1>Keep  </h1>  
-                 
+            <h1>{{name}}  </h1>                   
         </div>  
 
         <div class="searchOptiopn" fxLayoutAlign="start center" fxLayout="row">
@@ -22,7 +21,7 @@
 
         <div fxLayout="row" fxLayoutAlign="space-around center" class="toolbar-option-buttons">
             <div >
-                <button mat-icon-button (click)="checked=true">
+                <button mat-icon-button >
                     <mat-icon fontSet="material-icons-outlined">refresh</mat-icon>
                 </button> 
             </div>
@@ -59,11 +58,11 @@
     <mat-sidenav #drawer mode="side"class="example-sidenav">
         <div class="sideNavList" >
             <mat-nav-list >
-                <a mat-list-item routerLink='.'  (click)="checked=1" [style.backgroundColor]="checked=='1'?'#df9931':'white'" class="snavbarButtons">
+                <a mat-list-item routerLink='.' (click)="name='Notes'"  class="snavbarButtons">
                     <mat-icon fontSet="material-icons-outlined" style="padding-right: 10px;"></mat-icon>
                     Notes
                 </a>
-                <a mat-list-item routerLink='.' (click)="checked=2" [style.backgroundColor]="checked==2?'#df9931':'white'" class="snavbarButtons">
+                <a mat-list-item routerLink='.' (click)="name='Reminder'" class="snavbarButtons">
                     <mat-icon fontSet="material-icons-outlined" style="padding-right: 10px;" >notifications_none</mat-icon>
                     Reminder
                 </a>
@@ -84,11 +83,11 @@
         </div>
         <div>
             <mat-nav-list>
-                <a mat-list-item routerLink='.' class="snavbarButtons" (click)="checked=3" [style.backgroundColor]="checked==3?'#df9931':'white'">
+                <a mat-list-item routerLink='.' class="snavbarButtons" (click)="name='Archive'" >
                     <mat-icon fontSet="material-icons-outlined" style="padding-right: 10px;">archive</mat-icon>
                     Archive
                 </a>
-                <a mat-list-item routerLink='.' class="snavbarButtons" (click)="checked=4" [style.backgroundColor]="checked==4?'#df9931':'white'">
+                <a mat-list-item routerLink='.' class="snavbarButtons" (click)="name='Trash'" >
                     <mat-icon fontSet="material-icons-outlined" style="padding-right: 10px;">delete</mat-icon>
                     Trash
                 </a>
@@ -97,17 +96,8 @@
     </mat-sidenav>
 
     <div class="example-sidenav-content">
-      <div class="takeANote" fxLayoutAlign="center center" fxLayout="row">
-           
-           <mat-form-field  appearance="none" style="width: 80%; padding-left: 10px;" >
-              <input matInput placeholder="Take a Note" style="font-size: 16px; background-color: whitesmoke; width: 100%; border-style: unset">
-            </mat-form-field> 
-
-            <div style="width: 30px; height: 40px; margin-left: 50px; margin-bottom: 10px;" fxLayoutAlign="end center" fxLayout="row">
-                <button mat-icon-button ><mat-icon>brush</mat-icon></button> 
-            </div>
-            
-        </div>
+       
+       
     </div>
  </mat-sidenav-container>
   
