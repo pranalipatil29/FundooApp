@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import {MatListModule} from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {MatListModule} from '@angular/material/list';
         MatToolbarModule,
         MatSidenavModule,
         FlexLayoutModule,
-        MatListModule
+        MatListModule,
+        FormsModule
     ],
     exports:[
         MatFormFieldModule,
@@ -40,7 +42,8 @@ import {MatListModule} from '@angular/material/list';
         MatToolbarModule,
         MatSidenavModule,
         FlexLayoutModule,
-        MatListModule
+        MatListModule,
+        FormsModule
     ],
     providers: []
   })

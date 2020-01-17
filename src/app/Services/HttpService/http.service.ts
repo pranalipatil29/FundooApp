@@ -16,10 +16,11 @@ export class HttpService {
           {
           headers:new HttpHeaders
           ({
-            'Authorization':'Bearer'+localStorage.getItem('token'),
+            'Authorization':'Bearer '+localStorage.getItem('Token'),
             'Content-Type':'application/json'
           })
         }
+        console.log(data)
     return this.httpClient.post(this.baseURL+url, data, options);
   }
 
