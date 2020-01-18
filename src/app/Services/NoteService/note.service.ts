@@ -12,4 +12,8 @@ export class NoteService {
      return this.httpService.post('api/Note',data)
    }
 
+   GetNotes()
+   {
+     return this.httpService.get('api/Note')
+   }
 }

@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import { NoteService } from 'src/app/Services/NoteService/note.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
-
-
 @Component({
   selector: 'app-create-note',
   templateUrl: './create-note.component.html',

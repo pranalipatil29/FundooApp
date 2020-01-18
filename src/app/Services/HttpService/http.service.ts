@@ -30,11 +30,25 @@ export class HttpService {
       {
         headers:new HttpHeaders
         ({
-          'Authorization':'Bearer'+localStorage.getItem('token'),
+          'Authorization':'Bearer '+localStorage.getItem('Token'),
           'Content-Type':'application/json'
         })
      } 
      
     return this.httpClient.put(this.baseURL+url, data, options);
+  }
+
+  get(url)
+  {
+    let options=
+    {
+      headers:new HttpHeaders
+      ({
+        'Authorization':'Bearer '+localStorage.getItem('Token'),
+        'Content-Type':'application/json'
+      })
+   } 
+
+   return this.httpClient.get(this.baseURL+url, options);
   }
 }
