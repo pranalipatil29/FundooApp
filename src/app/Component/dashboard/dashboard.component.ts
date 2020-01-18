@@ -9,15 +9,18 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
- 
   constructor(
     private snackBar : MatSnackBar,
     private router :Router
   ) { }
+
   name="Keep";
-  
+  profilePic = ''
 
   ngOnInit() {
+
+    this.profilePic= localStorage.getItem('Profilepicture');
+  
   }
 
   LogOut()

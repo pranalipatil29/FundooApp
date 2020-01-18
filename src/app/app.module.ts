@@ -16,6 +16,7 @@ import { CreateNoteComponent } from './Component/create-note/create-note.compone
 import { IconComponent } from './Component/icon/icon.component';
 import { NotesComponent } from './Component/notes/notes.component';
 import { IconsComponent } from './Component/icons/icons.component';
+import { DisplayNoteComponent } from './Component/display-note/display-note.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { IconsComponent } from './Component/icons/icons.component';
     CreateNoteComponent,
     IconComponent,
     NotesComponent,
-    IconsComponent
+    IconsComponent,
+    DisplayNoteComponent
         
   ],
   imports: [

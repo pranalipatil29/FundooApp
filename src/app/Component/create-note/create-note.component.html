@@ -9,7 +9,7 @@
         
         <div class="takeanote-options"  fxLayoutAlign="space-around center" fxLayout="row">
             <button mat-icon-button (click)="checked=true" class="buttons">
-                <mat-icon fontSet="material-icons-outlined">checkebox</mat-icon>
+                <mat-icon fontSet="material-icons-outlined">check_box</mat-icon>
             </button>
             <button mat-icon-button (click)="checked=true" class="buttons">
                 <mat-icon fontSet="material-icons-outlined">brush</mat-icon>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <textarea matInput appearance="none" placeholder="Take a note" [(ngModel)]="description" class="description" appearance="none" fxLayoutAlign="start center" ></textarea>
+        <textarea matInput appearance="none" autofocus="true" placeholder="Take a note" [(ngModel)]="description" class="description" appearance="none" fxLayoutAlign="start center" ></textarea>
            
         <div class="icons" fxLayoutAlign="space-between center" fxLayout="row">
             <div fsxFlex="60">

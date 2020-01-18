@@ -1,35 +1,54 @@
-<div fxLayout="row" fxLayoutAlign = "space-around center" >
-    <button mat-icon-button  class = "buttons">
-        <mat-icon fontSet = "material-icons-outlined">add_alert</mat-icon>
-    </button>
-    <button mat-icon-button  class="buttons">
-        <mat-icon fontSet = "material-icons-outlined">person_add</mat-icon>
-    </button>
-    <button mat-icon-button  class="buttons">
-        <mat-icon fontSet = "material-icons-outlined">color_lens</mat-icon>
-    </button>
-    <button mat-icon-button  class="buttons">
-        <mat-icon fontSet = "material-icons-outlined">photo</mat-icon>
-    </button>
-    <button mat-icon-button  class="buttons">
-        <mat-icon fontSet = "material-icons-outlined" *ngIf="!isaArchive" (click) = "isaArchive = !isaArchive">archive</mat-icon>
-        <mat-icon fontSet = "material-icons-outlined" *ngIf="isaArchive" (click) = "!isaArchive = isaArchive">unarchive</mat-icon>
-    </button>
+<div fxLayout="row" fxLayoutAlign = "space-between center" >
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button class = "buttons">
+            <mat-icon fontSet = "material-icons-outlined" >add_alert</mat-icon>
+        </button>
+    </div >
+
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class="buttons">
+            <mat-icon fontSet = "material-icons-outlined">person_add</mat-icon>
+        </button>
+    </div>
   
-    <button mat-icon-button [matMenuTriggerFor]="menu" class="buttons">    
-        <mat-icon fontSet = "material-icons-outlined">more_vert</mat-icon>
-        <mat-menu #menu = "matMenu">
-           <button mat-menu-item>Add Label</button >
-           <button mat-menu-item>Add Drawing</button>
-           <button mat-menu-item>Show Checkboxes</button>
-        </mat-menu>
-    </button>
-   
-    <button mat-icon-button  class = "buttons">
-        <mat-icon fontSet = "material-icons-outlined">undo</mat-icon>
-    </button>
-    <button mat-icon-button  class="buttons">
-        <mat-icon fontSet = "material-icons-outlined">redo</mat-icon>
-    </button>
-  
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class="buttons" >
+            <mat-icon fontSet = "material-icons-outlined">color_lens</mat-icon>
+        </button>
+    </div>
+
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class="buttons">
+            <mat-icon fontSet = "material-icons-outlined">photo</mat-icon>
+        </button>
+    </div>
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class="buttons">
+            <mat-icon fontSet = "material-icons-outlined" *ngIf="!isaArchive" (click) = "isaArchive = !isaArchive">archive</mat-icon>
+            <mat-icon fontSet = "material-icons-outlined" *ngIf="isaArchive" (click) = "!isaArchive = isaArchive">unarchive</mat-icon>
+        </button>
+    </div>
+
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="buttons">    
+            <mat-icon fontSet = "material-icons-outlined">more_vert</mat-icon>
+            <mat-menu #menu = "matMenu">
+               <button mat-menu-item>Add Label</button >
+               <button mat-menu-item>Add Drawing</button>
+               <button mat-menu-item>Show Checkboxes</button>
+            </mat-menu>
+        </button>
+    </div>  
+
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class = "buttons">
+            <mat-icon fontSet = "material-icons-outlined">undo</mat-icon>
+        </button>
+    </div>
+    
+    <div style="padding-left: 5px; padding-right: 5px;">
+        <button mat-icon-button  class="buttons">
+            <mat-icon fontSet = "material-icons-outlined">redo</mat-icon>
+        </button>
+    </div>
 </div>

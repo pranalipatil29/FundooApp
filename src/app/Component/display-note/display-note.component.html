@@ -1,0 +1,28 @@
+<div fxLayoutAlign="space-around center" fxLayout="row" style="margin-top: 15px;" >
+    <mat-card class="noteContainer">
+        
+        <div class ="titletext" fxLayout="row" fxLayoutAlign="space-between center">      
+
+            <textarea matInput appearance="none" class="title-text" fxLayoutAlign="start center" >
+                {{ title }}
+            </textarea>  
+           
+            <div fxLayoutAlign="end center" fxLayout="row" class="pin">
+                <button mat-icon-button  fxLayoutAlign="center center">
+                    <img src="/assets/svg/pin.svg" *ngIf="!isPin" (click)="isPin = true" style=" width: 35px;">
+                    <img src ="/assets/png/pin2.png" *ngIf ="isPin" (click)="isPin = !isPin">
+                </button> 
+            </div>
+        </div>
+
+        <textarea matInput appearance="none"  class="description" appearance="none" fxLayoutAlign="start center" >
+            {{description}}
+        </textarea>
+           
+        <div class="icons" fxLayoutAlign="space-between center" fxLayout="row">
+            <div fsxFlex="80">
+                <app-icon></app-icon>
+            </div>      
+        </div>      
+    </mat-card>
+</div>

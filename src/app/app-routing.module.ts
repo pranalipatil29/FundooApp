@@ -7,6 +7,7 @@ import { ResetPasswordComponent } from './Component/reset-password/reset-passwor
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
 import { CreateNoteComponent } from './Component/create-note/create-note.component';
 import { NotesComponent } from './Component/notes/notes.component';
+import { DisplayNoteComponent } from './Component/display-note/display-note.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
 {path:'forgetPassword', component:ForgetPasswordComponent},
 {path:'resetPassword/:token', component:ResetPasswordComponent},
  {path : '', redirectTo: '/login', pathMatch:'full'},
+ {path: 'displayNote',component:DisplayNoteComponent},
 {path : 'dashboard',component:DashboardComponent ,children: [
   {
     path: '', redirectTo: 'notes', pathMatch: 'full'
