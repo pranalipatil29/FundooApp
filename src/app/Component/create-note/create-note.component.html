@@ -1,50 +1,46 @@
 <div fxLayoutAlign="center center" style="margin-top: 15px;">
 
-
-    <mat-card class="takeANote"  style="display: flex;" fxLayoutAlign="center center" fxLayout="row" *ngIf= "visible" >  
+    <mat-card class="takeANote"  style="display: flex;" fxLayoutAlign="center center" fxLayout="row"
+      *ngIf= "visible" >  
+       
         <div style=" width: 480px; height: 40px; margin-top: 8px; font-size: 16px;" fxLayoutAlign="start center"
-            (click)="visible = !visible">
-        Take a Note          
+            (click)="visible = !visible">Take a Note          
         </div>
         
         <div class="takeanote-options"  fxLayoutAlign="space-around center" fxLayout="row">
-            <button mat-icon-button (click)="checked=true" class="buttons" >
-                    <mat-icon fontSet="material-icons-outlined">checkebox</mat-icon>
+            <button mat-icon-button (click)="checked=true" class="buttons">
+                <mat-icon fontSet="material-icons-outlined">checkebox</mat-icon>
             </button>
-            <button mat-icon-button (click)="checked=true" class="buttons" >
+            <button mat-icon-button (click)="checked=true" class="buttons">
                 <mat-icon fontSet="material-icons-outlined">brush</mat-icon>
             </button>
-            <button mat-icon-button (click)="checked=true" class="buttons" >
-            <mat-icon fontSet="material-icons-outlined">image</mat-icon>
+            <button mat-icon-button (click)="checked=true" class="buttons">
+                <mat-icon fontSet="material-icons-outlined">image</mat-icon>
             </button>     
         </div>      
     </mat-card>
 
     <mat-card class="noteContainer" *ngIf="!visible">
-        <div class ="titletext" fxLayout="row" fxLayoutAlign="space-between center">
-            <div appearance="none" class="title-text" fxLayout="row" fxLayoutAlign="space-between center"  fxLayout="row">
-              
-                <input matInput appearance="none" placeholder="Title" [(ngModel)]="title" style="width: 100%; height: 50px; padding-bottom: 5px;">
-                
-                <div fxLayoutAlign="end center" fxLayout="row" class="pin">
-                    <button mat-icon-button  fxLayoutAlign="center center"  >
-                        <img src="/assets/pin.jpg" (click)="isPin = true" class="buttons" style="padding-bottom: 7px; width: 30px; height: 30px; padding-top: 5px;">
-                    </button> 
-                </div>
+        <div class ="titletext" fxLayout="row" fxLayoutAlign="space-between center">          
+            <textarea matInput appearance="none" placeholder="Title" [(ngModel)]="title" class="title-text" fxLayoutAlign="start center" ></textarea>  
+           
+            <div fxLayoutAlign="end center" fxLayout="row" class="pin">
+                <button mat-icon-button  fxLayoutAlign="center center">
+                    <img src="/assets/svg/pin.svg" *ngIf="!isPin" (click)="isPin = true" style=" width: 35px;">
+                    <img src ="/assets/png/pin2.png" *ngIf ="isPin" (click)="isPin = !isPin">
+                </button> 
             </div>
         </div>
 
-        <div appearance="none" class="description"fxLayout="row" fxLayoutAlign="space-between center"  fxLayout="row">
-            <input matInput placeholder="Take a note" [(ngModel)]="description" appearance="none" style="width: 100%; height: 50px; padding-bottom: 5px;">
+        <textarea matInput appearance="none" placeholder="Take a note" [(ngModel)]="description" class="description" appearance="none" fxLayoutAlign="start center" ></textarea>
            
-        </div>
         <div class="icons" fxLayoutAlign="space-between center" fxLayout="row">
-            <div  fxFlex="70">
+            <div fsxFlex="60">
                 <app-icon></app-icon>
             </div>
 
             <div fxLayoutAlign="end center" fxLayout="row">
-                <a mat-button  (click)="CreateNote()">Close</a>
+                <a mat-button (click)="CreateNote()">Close</a>
             </div>       
         </div>      
     </mat-card>

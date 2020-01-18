@@ -51,10 +51,13 @@
              </div>
  
              <div >
-                 <button mat-icon-button>
-                     <mat-icon fontSet="material-icons-outlined">account_circle</mat-icon>
-                     </button>  
-                 </div>
+                <button mat-icon-button [matMenuTriggerFor]="menu" class="buttons">    
+                    <mat-icon fontSet = "material-icons-outlined">account_circle</mat-icon>
+                      <mat-menu #menu = "matMenu">
+                        <button mat-menu-item (click)="LogOut()">Sign Out</button >                           
+                      </mat-menu>
+                </button>
+             </div>
          </div>
      </div>
   </mat-toolbar>   

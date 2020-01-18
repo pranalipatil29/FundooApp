@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IconComponent implements OnInit {
 
+  isArchive= false
+
   constructor() { }
 
   ngOnInit() {
